@@ -19,9 +19,9 @@ Mode is detected automatically from context. You can also state it explicitly.
 
 ## What's in a Report
 
-Each research run produces a `[Company-Name].md` file in the current working directory and a `[Company-Name]-screenshots/` folder with saved product images.
+Each research run produces a `[Company-Name].md` file in the current working directory and a `[Company-Name]-screenshots/` folder with saved product images. The goal is to collect as much relevant information about a company as possible in a single, structured reference document. Reports are designed to support a range of research topics, not just the one that prompted the original research.
 
-The report always opens with an executive summary (written after all research is complete, placed at the top), followed by 17 sections:
+The report opens with a brief executive summary. The remaining 17 sections cover the company in depth and can be read directly or passed as context to future Claude instructions to support specific outcomes, like preparing for an interview, running a competitive analysis, or synthesizing strategy.
 
 1. Company Mission and Vision
 2. Company Values and Culture
