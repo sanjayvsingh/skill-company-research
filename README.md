@@ -1,2 +1,135 @@
-# skill-company-research
-A Claude Skill I'm building to help researching companies for competitive analysis and strategic direction. Focus is on helpful data for Product Managers, including product roadmap, executive statements, and product images.
+# pm-company-research
+
+A Claude Code skill for product managers that produces structured company intelligence reports. Combines deep product research, executive insights, PM organizational analysis, and Hamilton Helmer's **Seven Powers** competitive moat framework.
+
+Built by combining two published skills — see [Inspiration](#inspiration) below.
+
+---
+
+## Use Cases
+
+This skill is optimized for three PM-specific research contexts:
+
+| Mode | Trigger | Output focus |
+|------|---------|-------------|
+| **Interview prep** | "research [company] for interview" | PM org culture, executive philosophy, values alignment, talking points |
+| **Competitive analysis** | "competitive analysis of [company]" | Product differentiation, pricing, Seven Powers moat profile |
+| **Strategy synthesis** | "how does [company] approach [topic]" | Executive thinking, PLG patterns, transferable practices |
+
+Mode is detected automatically from context. You can also state it explicitly.
+
+---
+
+## What's in a Report
+
+Each research run produces a `[Company-Name].md` file in the current working directory and a `[Company-Name]-screenshots/` folder with saved product images.
+
+The report covers 17 sections:
+
+1. Company Mission & Vision
+2. Company Values & Culture
+3. Key Facts
+4. Executive Insights — leadership quotes, product philosophy, strategic priorities
+5. Products & Services — with embedded screenshots
+6. Product Deep Dive — features, workflows, integrations, recent updates
+7. Transformation & Innovation Strategy — AI approach, platform direction, GTM shifts
+8. Product-Led Growth & Data Culture — PLG motions, experimentation signals
+9. PM Organization & Culture — seniority, autonomy, decision-making, career path
+10. Industry & Market Position
+11. Customers & Use Cases
+12. Pricing Model
+13. Competitive Positioning — comparison table vs. key competitors
+14. **Seven Powers Analysis** — moat assessment across all 7 powers
+15. Strategic Signals — transferable practices and industry benchmarks
+16. PM Interview Prep Insights — grounded, company-specific talking points
+17. Sources
+
+### Seven Powers Analysis
+
+Section 14 rates each of Helmer's seven powers (`Strong / Emerging / Weak / None / Unknown`) with evidence:
+
+- **Scale Economies** — cost structure advantages that compound with volume
+- **Network Effects** — value increases as the user base grows
+- **Counter-Positioning** — business model incumbents can't copy without self-harm
+- **Switching Costs** — data lock-in, workflow integration, training sunk costs
+- **Branding** — price premium or preference independent of product specs
+- **Cornered Resource** — unique IP, data, talent, or distribution access
+- **Process Power** — embedded operational excellence competitors can't replicate
+
+For multi-company runs, a cross-company Seven Powers comparison table is generated automatically.
+
+---
+
+## Installation
+
+Clone this repository directly into your Claude Code skills directory:
+
+```bash
+# macOS / Linux
+git clone https://github.com/sanjayvsingh/skill-company-research.git \
+  ~/.claude/skills/pm-company-research
+
+# Windows (PowerShell)
+git clone https://github.com/sanjayvsingh/skill-company-research.git `
+  "$env:USERPROFILE\.claude\skills\pm-company-research"
+```
+
+Claude Code will detect the skill automatically on next launch. Confirm it's active by typing `/skills` in a Claude Code session — you should see `pm-company-research` listed.
+
+### Updating
+
+```bash
+cd ~/.claude/skills/pm-company-research && git pull
+```
+
+---
+
+## Usage
+
+Trigger the skill naturally — Claude detects the intent and selects the right mode:
+
+```
+Research Notion for an upcoming PM interview
+```
+```
+Competitive analysis of Linear vs. Jira vs. Asana
+```
+```
+How does Figma approach product-led growth?
+```
+```
+Research Stripe and Adyen using pm-company-research
+```
+
+You can also invoke it explicitly:
+
+```
+Research [company] using pm-company-research
+```
+
+---
+
+## Output
+
+```
+[working directory]/
+├── Figma.md                        ← full research report
+├── Figma-screenshots/
+│   ├── editor.png
+│   ├── components.png
+│   └── pricing.png
+└── Linear.md                       ← if multiple companies requested
+    Linear-screenshots/
+    └── ...
+```
+
+---
+
+## Inspiration
+
+This skill was built by combining two published skills:
+
+- **[priankr/claude-skill-company-research](https://github.com/priankr/claude-skill-company-research)** — structured company research workflow with 10-section output format, job seeker insights, multi-company handling, and source quality standards
+- **[deanpeters/Product-Manager-Skills](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/company-research/SKILL.md)** — PM-native research framework focused on executive quotes, product philosophy, transformation strategy, PLG signals, and organizational PM dynamics
+
+The Seven Powers framework is from Hamilton Helmer's book [*7 Powers: The Foundations of Business Strategy*](https://7powers.com/).
