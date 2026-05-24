@@ -106,13 +106,15 @@ Research [company] using pm-company-research
 
 ```
 [working directory]/
-├── Figma.md                        ← full research report
+├── Figma.md                        ← markdown research report
+├── Figma.html                      ← HTML report with images displayed inline
 ├── Figma-screenshots/
 │   ├── editor.png
 │   ├── components.png
 │   └── pricing.png
-└── Linear.md                       ← if multiple companies requested
-    Linear-screenshots/
+├── Linear.md                       ← if multiple companies requested
+├── Linear.html
+└── Linear-screenshots/
     └── ...
 ```
 

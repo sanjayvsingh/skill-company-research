@@ -35,12 +35,12 @@ Also note:
 
 ### Step 2: Research the Company
 
-**Output file:** `[Company-Name].md` in the current working directory (hyphens, no spaces)
-**Examples:** `Figma.md`, `Linear.md`, `Notion.md`
+**Output files:** `[Company-Name].md` and `[Company-Name].html` in the current working directory (hyphens, no spaces)
+**Examples:** `Figma.md` + `Figma.html`, `Linear.md` + `Linear.html`
 
 **Screenshots folder:** `[Company-Name]-screenshots/` in the current working directory
 - Save 3–5 product screenshots per company (see Screenshot Workflow below)
-- Reference screenshots in the markdown with relative paths
+- Reference screenshots in the markdown and HTML with relative paths
 
 **Source strategy — in priority order:**
 1. Official pages: About, Careers, Product, Engineering Blog, Investor Relations, Press, Newsroom
@@ -79,6 +79,34 @@ For each company, find and save 3–5 representative product screenshots:
 **Screenshot placement:** Add an inline Screenshots subsection within Section 5 (Products & Services) and/or Section 6 (Product Deep Dive), immediately after describing the relevant feature or product.
 
 **If screenshots cannot be downloaded:** Note the source URLs in a "Screenshot Sources" list at the bottom of Section 6 so images can be viewed manually.
+
+### HTML Report
+
+After the markdown file is complete and screenshots are saved, write `[Company-Name].html` containing the same content, structured for browser viewing. The HTML file must be fully self-contained — all CSS embedded in a `<style>` block, no external stylesheets or fonts, so it works offline.
+
+**Layout and structure:**
+- Sticky left sidebar with a table of contents linking to each section by anchor ID
+- Main content area to the right, with section headings matching the markdown structure
+- Page title at the top with company name and date generated
+
+**Images:**
+- Display product screenshots inline using relative paths: `./[Company-Name]-screenshots/filename.png`
+- Wrap images in a responsive grid (two columns on wide screens, one column on narrow)
+- Include a caption under each image using the filename as fallback text
+- If a screenshot could not be downloaded, show a placeholder box with the source URL as a link
+
+**Seven Powers ratings:**
+- Display each rating as a small colored badge next to the power name
+- Strong: green background; Emerging: amber; Weak: orange; None: red; Unknown: light gray
+- Keep badge text as a single word (Strong, Emerging, Weak, None, Unknown)
+
+**Styling guidelines:**
+- White background, dark gray body text (#222), system font stack (system-ui, sans-serif)
+- Section headings in a dark accent color; sidebar in a light gray background (#f5f5f5)
+- Responsive: sidebar collapses to a top navigation bar on narrow screens
+- Tables styled with alternating row shading and a visible header row
+- Blockquotes (used for executive quotes) styled with a left border and light background
+- No decorative imagery, gradients, or non-semantic color
 
 ### Step 3: Product Deep Dive Document (Optional)
 
