@@ -1,6 +1,6 @@
 ---
 name: pm-company-research
-description: PM-optimized company research skill for three use cases: (1) interview preparation at a target company, (2) synthesizing a company's practices against industry patterns for strategic use, (3) competitive analysis. Use when the user says "research [company]", "prepare for interview at [company]", "competitive analysis of [company]", "how does [company] approach [topic]", or "benchmark [company] against us". Generates structured markdown reports combining executive thinking, product strategy, PM organizational culture, Seven Powers competitive analysis, and market intelligence.
+description: PM-optimized company research skill for four use cases: (1) full-scope general research on a company, (2) interview preparation at a target company, (3) competitive analysis, (4) synthesizing a company's practices against industry patterns for strategic use. Use when the user says "research [company]" (triggers full research), "prepare for interview at [company]", "competitive analysis of [company]", "how does [company] approach [topic]", or "benchmark [company] against us". Generates structured markdown reports combining executive thinking, product strategy, PM organizational culture, Seven Powers competitive analysis, and market intelligence.
 ---
 
 # PM Company Research
@@ -22,9 +22,15 @@ If no mode is specified, or if the user's needs span multiple modes, run compreh
 
 ### Step 1: Confirm Mode and Scope
 
-Before starting:
-- Identify mode from context (see triggers above)
-- If multiple companies: confirm the list, then research sequentially — complete one company fully before starting the next
+Before starting, identify mode from context:
+- "research [company]" with no other qualifier → `comprehensive` (all sections)
+- User mentions interview, job application, or hiring → `interview`
+- User mentions competitors, market, benchmark, or "vs." → `competitive`
+- User mentions strategy, industry practices, or their own company context → `strategy`
+- Ambiguous → default to `comprehensive`
+
+Also note:
+- If multiple companies: confirm the list, then research sequentially, completing one company fully before starting the next
 - If a product URL is provided: treat that product as the primary focus for Sections 6 and 14
 
 ### Step 2: Research the Company

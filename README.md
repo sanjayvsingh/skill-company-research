@@ -10,6 +10,7 @@ This skill is optimized for three PM-specific research contexts:
 
 | Mode | Trigger | Output focus |
 |------|---------|-------------|
+| **Full research** | "research [company]" | All 17 sections, all modes combined |
 | **Strategy synthesis** | "how does [company] approach [topic]" | Executive thinking, PLG patterns, transferable practices |
 | **Competitive analysis** | "competitive analysis of [company]" | Product differentiation, pricing, Seven Powers moat profile |
 | **Interview prep** | "research [company] for interview" | PM org culture, executive philosophy, values alignment, talking points |
@@ -20,7 +21,7 @@ Mode is detected automatically from context. You can also state it explicitly.
 
 Each research run produces a `[Company-Name].md` file in the current working directory and a `[Company-Name]-screenshots/` folder with saved product images.
 
-The report covers 17 sections:
+The report always opens with an executive summary (written after all research is complete, placed at the top), followed by 17 sections:
 
 1. Company Mission and Vision
 2. Company Values and Culture
@@ -79,6 +80,9 @@ cd ~/.claude/skills/pm-company-research && git pull
 
 Trigger the skill naturally. Claude detects the intent and selects the right mode:
 
+```
+Research Figma
+```
 ```
 How does Figma approach product-led growth?
 ```
