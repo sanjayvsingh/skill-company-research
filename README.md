@@ -69,9 +69,8 @@ Clone this repository directly into your Claude Code skills directory:
 git clone https://github.com/sanjayvsingh/skill-company-research.git \
   ~/.claude/skills/pm-company-research
 
-# Windows (PowerShell)
-git clone https://github.com/sanjayvsingh/skill-company-research.git `
-  "$env:USERPROFILE\.claude\skills\pm-company-research"
+# Windows (Command Prompt)
+git clone https://github.com/sanjayvsingh/skill-company-research.git "%USERPROFILE%\.claude\skills\pm-company-research"
 ```
 
 Claude Code will detect the skill automatically on next launch. Confirm it's active by typing `/skills` in a Claude Code session — you should see `pm-company-research` listed.
@@ -127,9 +126,11 @@ Research [company] using pm-company-research
 
 ## Inspiration
 
-This skill was built by combining two published skills:
+Two existing skills informed early thinking on this one and are worth knowing about:
 
-- **[priankr/claude-skill-company-research](https://github.com/priankr/claude-skill-company-research)** — structured company research workflow with 10-section output format, job seeker insights, multi-company handling, and source quality standards
-- **[deanpeters/Product-Manager-Skills](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/company-research/SKILL.md)** — PM-native research framework focused on executive quotes, product philosophy, transformation strategy, PLG signals, and organizational PM dynamics
+- **[priankr/claude-skill-company-research](https://github.com/priankr/claude-skill-company-research)** — a well-structured general-purpose company research skill with strong source discipline and job seeker focus
+- **[deanpeters/Product-Manager-Skills](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/company-research/SKILL.md)** — a PM-oriented research framework emphasizing executive quotes, product philosophy, and organizational dynamics
+
+This skill was designed from the ground up around a product manager's specific needs — interview prep, competitive analysis, and strategy synthesis — and adds the Seven Powers moat framework, PM org culture assessment, executive insight extraction, and product screenshot capture as core components.
 
 The Seven Powers framework is from Hamilton Helmer's book [*7 Powers: The Foundations of Business Strategy*](https://7powers.com/).

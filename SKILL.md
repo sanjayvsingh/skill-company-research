@@ -82,6 +82,16 @@ Create a separate file `[Product-Name]-Features-and-Functionality.md` when: user
 
 ## Document Structure
 
+### Executive Summary *(always present — written last, placed first)*
+
+Write this section after completing all other sections, then move it to the top of the document. Two paragraphs, no subsections, no bullets.
+
+**Paragraph 1 — What the company is:** Describe the company in plain language: what it does, who it serves, how it makes money, and where it sits in the market. A reader with no prior knowledge of the company should finish this paragraph with a clear mental model of the business.
+
+**Paragraph 2 — Why it matters for this research:** Synthesize the most important findings relative to the user's research mode. For `interview` mode: what defines this company's PM culture and what a strong candidate needs to know. For `competitive` mode: the company's core strategic position and where its moat is strongest or weakest. For `strategy` mode: the most transferable insight or the sharpest contrast with conventional industry practice. This paragraph should read like the one thing you'd say if you only had 30 seconds to brief someone.
+
+---
+
 ### Section 1: Company Mission & Vision
 
 - Official mission or vision statement — verbatim with source citation
