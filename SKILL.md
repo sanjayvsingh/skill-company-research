@@ -1,6 +1,6 @@
 ---
 name: pm-company-research
-description: PM-optimized company research skill for four use cases: (1) full-scope general research on a company, (2) interview preparation at a target company, (3) competitive analysis, (4) synthesizing a company's practices against industry patterns for strategic use. Use when the user says "research [company]" (triggers full research), "prepare for interview at [company]", "competitive analysis of [company]", "how does [company] approach [topic]", or "benchmark [company] against us". Generates structured markdown reports combining executive thinking, product strategy, PM organizational culture, Seven Powers competitive analysis, and market intelligence.
+description: 'PM-optimized company research skill for four use cases: (1) full-scope general research on a company, (2) interview preparation at a target company, (3) competitive analysis, (4) synthesizing a company''s practices against industry patterns for strategic use. Use when the user says "research [company]" (triggers full research), "prepare for interview at [company]", "competitive analysis of [company]", "how does [company] approach [topic]", or "benchmark [company] against us". Generates structured markdown reports combining executive thinking, product strategy, PM organizational culture, Seven Powers competitive analysis, and market intelligence.'
 ---
 
 # PM Company Research
